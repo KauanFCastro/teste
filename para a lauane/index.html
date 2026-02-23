@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Menina Verão</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<!-- 💌 ENVELOPE -->
+<div class="envelope-wrapper" onclick="abrirCarta()">
+  <div class="envelope">
+    <div class="flap"></div>
+    <div class="letter-preview">Clique para abrir</div>
+  </div>
+</div>
+
+<!-- 💌 CARTA COM POEMA -->
+<div class="container hidden" id="carta">
+  <h1>Menina Verão</h1>
+
+  <div class="poema">
+    <p>Seus olhos são folhas de outono em queda, cintilam como um céu coberto de amarelos e castanhos, um véu suave que pousa sobre o tempo e faz do instante um lugar de abrigo.</p>
+
+    <p>Seu sorriso é primavera que chega sem aviso, flor aberta no meio do meu dia, luz que brota onde antes era espera e colore o que em mim era silêncio.</p>
+
+    <p>Estar com você é inverno sem frio: não pela neve, mas pelo calor que me envolve, um fogo manso aceso nas noites longas que transforma a escuridão em lar.</p>
+
+    <p>Sua presença é verão que amadurece o tempo, sol que repousa sobre o horizonte do meu peito, estrela alta que me ensina direção no escuro e faz do céu um caminho onde posso existir.</p>
+  </div>
+
+  <div class="autor">(Izeref)</div>
+</div>
+
+<script>
+function abrirCarta(){
+  document.querySelector(".envelope-wrapper").classList.add("open");
+  setTimeout(()=>{
+    document.getElementById("carta").classList.remove("hidden");
+  },800);
+}
+</script>
+
+</body>
+</html>
